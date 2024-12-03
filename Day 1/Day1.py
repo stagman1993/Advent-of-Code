@@ -14,3 +14,12 @@ for row in df.iloc():
     df.loc[row.name, 'difference'] = difference
 
 print(df['difference'].sum())
+
+#Part 2 of day 1:
+similarity_list = []
+for value in df['val 1']:
+    count_of_value = df['val 2'].tolist().count(value)
+    similarity_score = value * count_of_value
+    similarity_list.append(similarity_score)
+
+print(sum(similarity_list))
