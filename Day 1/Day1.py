@@ -1,6 +1,6 @@
 import pandas as pd
 
-file = "day1input.txt"
+file = "day 1 input.txt"
 
 df = pd.read_csv(file, sep="   ")
 
