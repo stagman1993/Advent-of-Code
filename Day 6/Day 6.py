@@ -11,7 +11,7 @@ guard = {"^": (0, 1),
          "<": (1, 0)
          }
 
-file = "Day 4 Input.txt"
+file = "Day 6 Input.txt"
 
 with open(file) as f:
     data = []
