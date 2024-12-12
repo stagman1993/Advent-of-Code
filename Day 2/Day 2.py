@@ -26,6 +26,12 @@ def check_reactor(report: list):
     diff = np.diff(np_report)
     if np.all((diff > 0) & (diff <= 3)) or np.all((diff >= -3) & (diff < 0)):
         reactor_safe = True
+    else:
+        for i in range(len(np_report)):
+            new_report = report[:i] + report[i +1 :]
+            diff = np.diff(new_report)
+            if np.all((diff > 0) & (diff <= 3)) or np.all((diff >= -3) & (diff < 0)):
+                reactor_safe = True
 
     return reactor_safe
 
